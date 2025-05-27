@@ -6,8 +6,24 @@
     <title>Lottie Animation</title>
 </head>
 <body>
-    <!-- Canvas element where the Lottie animation will be rendered -->
-    <canvas id="canvas" width="300" height="300" aria-label="Lottie Animation"></canvas>
+    <div role="region" aria-label="Lottie animation container">
+        <canvas
+            id="canvas"
+            width="300"
+            height="300"
+            aria-labelledby="animation-title animation-description"
+            role="img"
+            tabindex="0"
+        ></canvas>
+
+        <h2 id="animation-title" class="visually-hidden">Animation Title</h2>
+        <p id="animation-description" class="visually-hidden">Detailed description of the animation.</p>
+
+        <div role="group" aria-label="Animation controls">
+            <button id="play-pause" aria-label="Play or pause animation">Play/Pause</button>
+            <button id="stop" aria-label="Stop animation">Stop</button>
+        </div>
+    </div>
     <script type="module">
       import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
 
